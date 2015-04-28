@@ -8,9 +8,10 @@
 
 #import "ViewController.h"
 #import <Social/Social.h>
-@interface ViewController ()
+#import <AVFoundation/AVFoundation.h>
+@interface ViewController () <AVAudioPlayerDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *willITLabel;
-
+@property (strong, nonatomic)  AVAudioPlayer * audioPlayer;
 @end
 
 
@@ -43,14 +44,26 @@ bool isDead;
     [self becomeFirstResponder];
 }
 -(void)updateView{
-    
+    NSURL *soundURL;
+    _audioPlayer.delegate = self;
+ 
     if (isDead) {
         _willITLabel.text = @"YES";
+        soundURL = [[NSBundle mainBundle] URLForResource:@"yes"
+                                                  withExtension:@"aiff"];
+    
         [self sendTweet];
     }else{
         _willITLabel.text = @"NO";
-
+       soundURL = [[NSBundle mainBundle] URLForResource:@"no"
+                                                  withExtension:@"aiff"];
+     
     }
+    _audioPlayer = [[AVAudioPlayer alloc]
+                    initWithContentsOfURL:soundURL error:nil];
+    
+    [_audioPlayer play];
+
 }
 -(void)sendTweet{
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
