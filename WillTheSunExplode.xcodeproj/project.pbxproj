@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A49C39C1AEFF1CF0085BAF4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A49C39B1AEFF1CF0085BAF4 /* Social.framework */; };
+		8A49C39F1AEFF2F30085BAF4 /* ComicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A49C39E1AEFF2F30085BAF4 /* ComicViewController.m */; };
+		8A49C3A11AEFF5810085BAF4 /* Sun Explode?.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A49C3A01AEFF5810085BAF4 /* Sun Explode?.png */; };
 		8A65DBC31AEEB7870075047E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65DBC21AEEB7870075047E /* main.m */; };
 		8A65DBC61AEEB7870075047E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65DBC51AEEB7870075047E /* AppDelegate.m */; };
 		8A65DBC91AEEB7870075047E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65DBC81AEEB7870075047E /* ViewController.m */; };
@@ -14,6 +17,7 @@
 		8A65DBCE1AEEB7880075047E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A65DBCD1AEEB7880075047E /* Images.xcassets */; };
 		8A65DBD11AEEB7880075047E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A65DBCF1AEEB7880075047E /* LaunchScreen.xib */; };
 		8A65DBDD1AEEB7890075047E /* WillTheSunExplodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A65DBDC1AEEB7890075047E /* WillTheSunExplodeTests.m */; };
+		8A65DBE71AEEB8B80075047E /* CheapPotatoes.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8A65DBE61AEEB8B80075047E /* CheapPotatoes.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8A49C39B1AEFF1CF0085BAF4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		8A49C39D1AEFF2F30085BAF4 /* ComicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComicViewController.h; sourceTree = "<group>"; };
+		8A49C39E1AEFF2F30085BAF4 /* ComicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComicViewController.m; sourceTree = "<group>"; };
+		8A49C3A01AEFF5810085BAF4 /* Sun Explode?.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sun Explode?.png"; sourceTree = "<group>"; };
 		8A65DBBD1AEEB7870075047E /* WillTheSunExplode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WillTheSunExplode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65DBC11AEEB7870075047E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A65DBC21AEEB7870075047E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +48,7 @@
 		8A65DBD61AEEB7890075047E /* WillTheSunExplodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WillTheSunExplodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A65DBDB1AEEB7890075047E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A65DBDC1AEEB7890075047E /* WillTheSunExplodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WillTheSunExplodeTests.m; sourceTree = "<group>"; };
+		8A65DBE61AEEB8B80075047E /* CheapPotatoes.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CheapPotatoes.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A49C39C1AEFF1CF0085BAF4 /* Social.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +73,7 @@
 		8A65DBB41AEEB7870075047E = {
 			isa = PBXGroup;
 			children = (
+				8A49C39B1AEFF1CF0085BAF4 /* Social.framework */,
 				8A65DBBF1AEEB7870075047E /* WillTheSunExplode */,
 				8A65DBD91AEEB7890075047E /* WillTheSunExplodeTests */,
 				8A65DBBE1AEEB7870075047E /* Products */,
@@ -81,13 +92,17 @@
 		8A65DBBF1AEEB7870075047E /* WillTheSunExplode */ = {
 			isa = PBXGroup;
 			children = (
+				8A65DBE61AEEB8B80075047E /* CheapPotatoes.ttf */,
 				8A65DBC41AEEB7870075047E /* AppDelegate.h */,
 				8A65DBC51AEEB7870075047E /* AppDelegate.m */,
 				8A65DBC71AEEB7870075047E /* ViewController.h */,
 				8A65DBC81AEEB7870075047E /* ViewController.m */,
 				8A65DBCA1AEEB7870075047E /* Main.storyboard */,
+				8A49C39D1AEFF2F30085BAF4 /* ComicViewController.h */,
+				8A49C39E1AEFF2F30085BAF4 /* ComicViewController.m */,
 				8A65DBCD1AEEB7880075047E /* Images.xcassets */,
 				8A65DBCF1AEEB7880075047E /* LaunchScreen.xib */,
+				8A49C3A01AEFF5810085BAF4 /* Sun Explode?.png */,
 				8A65DBC01AEEB7870075047E /* Supporting Files */,
 			);
 			path = WillTheSunExplode;
@@ -168,6 +183,7 @@
 				TargetAttributes = {
 					8A65DBBC1AEEB7870075047E = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = Z48RKT6B3T;
 					};
 					8A65DBD51AEEB7890075047E = {
 						CreatedOnToolsVersion = 6.3;
@@ -200,6 +216,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A65DBCC1AEEB7870075047E /* Main.storyboard in Resources */,
+				8A65DBE71AEEB8B80075047E /* CheapPotatoes.ttf in Resources */,
+				8A49C3A11AEFF5810085BAF4 /* Sun Explode?.png in Resources */,
 				8A65DBD11AEEB7880075047E /* LaunchScreen.xib in Resources */,
 				8A65DBCE1AEEB7880075047E /* Images.xcassets in Resources */,
 			);
@@ -221,6 +239,7 @@
 			files = (
 				8A65DBC91AEEB7870075047E /* ViewController.m in Sources */,
 				8A65DBC61AEEB7870075047E /* AppDelegate.m in Sources */,
+				8A49C39F1AEFF2F30085BAF4 /* ComicViewController.m in Sources */,
 				8A65DBC31AEEB7870075047E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,8 +367,10 @@
 		8A65DBE11AEEB7890075047E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WillTheSunExplode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,8 +379,10 @@
 		8A65DBE21AEEB7890075047E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = WillTheSunExplode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +441,7 @@
 				8A65DBE21AEEB7890075047E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8A65DBE31AEEB7890075047E /* Build configuration list for PBXNativeTarget "WillTheSunExplodeTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +450,7 @@
 				8A65DBE51AEEB7890075047E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
