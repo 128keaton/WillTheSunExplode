@@ -19,15 +19,29 @@
 bool isDead;
 
 - (void)viewDidLoad {
+    UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(noShake)];
+    letterTapRecognizer.numberOfTapsRequired = 1;
+    _willITLabel.userInteractionEnabled = YES;
+    [_willITLabel addGestureRecognizer:letterTapRecognizer];
+    
     [super viewDidLoad];
     _willITLabel.font = [UIFont fontWithName:@"CheapPotatoes" size:30];
-    _willITLabel.text = @"shake";
+    _willITLabel.text = @"tap or shake";
     
     _willITLabel.center = self.view.center;
 
 
     
     // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)noShake{
+    _willITLabel.text = @"...";
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self initiateRandomNumber];
+        
+    });
+
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +71,10 @@ bool isDead;
         _willITLabel.text = @"NO";
        soundURL = [[NSBundle mainBundle] URLForResource:@"no"
                                                   withExtension:@"aiff"];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 10 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+           _willITLabel.text = @"TAP or SHAKE";
+            
+        });
      
     }
     _audioPlayer = [[AVAudioPlayer alloc]
