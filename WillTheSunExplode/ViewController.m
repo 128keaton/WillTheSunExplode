@@ -17,6 +17,7 @@
 
 @implementation ViewController
 bool isDead;
+bool isWaiting;
 
 - (void)viewDidLoad {
     UITapGestureRecognizer *letterTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(noShake)];
@@ -37,6 +38,7 @@ bool isDead;
 -(void)noShake{
     _willITLabel.text = @"...";
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+    
         [self initiateRandomNumber];
         
     });
@@ -112,17 +114,20 @@ bool isDead;
     if (motion == UIEventSubtypeMotionShake)
     {
         _willITLabel.text = @"...";
+        if (isWaiting == NO) {
+        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, .5 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            isWaiting = YES;
             [self initiateRandomNumber];
            
         });
         
-        
+        }
     }
 }
 
 -(void)initiateRandomNumber{
-    
+    isWaiting = NO;
     NSUInteger random = arc4random_uniform(5432 * 27);
     switch (random) {
         case 5432:
